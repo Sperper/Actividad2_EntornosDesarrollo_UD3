@@ -6,8 +6,9 @@
 package actividad_02_ud3_ed;
 
 /**
- * 
- * @author Ana
+ * Constructor de la clase CCuenta
+ * @author Samuel
+ * @version 1.0
  */
 public class CCuenta {
 
@@ -25,9 +26,9 @@ public class CCuenta {
    /**
     * 
     * @param nom Nombre del titular de la cuenta
-    * @param cue
-    * @param sal
-    * @param tipo 
+    * @param cue Cuenta del titular de la cuenta
+    * @param sal Saldo que tiene la cuenta
+    * @param tipo Tipo de interés de la cuenta
     */
     public CCuenta (String nom, String cue, double sal, double tipo)
     {
@@ -38,25 +39,36 @@ public class CCuenta {
     }
   /**
    * 
-   * @param nom 
+   * @param nom Nombre del titutular de la cuenta 
    */
     public void asignarNombre(String nom)
     {
         nombre=nom;
     }
    
+    /**
+     * 
+     * @return Nombre del titular 
+     */
     public String obtenerNombre()
     {
         return nombre;
     }
 
-    
+    /**
+     * 
+     * @return Saldo de la cuenta  
+     */
      public double estado ()
     {
         return saldo;
     }
 
-    
+    /**
+     * 
+     * @param cantidad cantidad de dinero a ingresar
+     * @throws Exception muestra un mensaje de error si el usuario intenta inngresar una cantidad negativa
+     */
     public void ingresar(double cantidad) throws Exception
     {
         if (cantidad<0){
@@ -64,7 +76,11 @@ public class CCuenta {
         setSaldo(saldo + cantidad);
     }
 
-   
+   /**
+    * 
+    * @param cantidad cantidad de dinero a retirar
+    * @throws Exception muestra un mensaje de error si el usuario desea retirar una cantidad negativa o si desea retirar mas saldo que el que tiene la cuenta
+    */
     public void retirar (double cantidad) throws Exception
     {
         if (cantidad < 0){
@@ -74,27 +90,43 @@ public class CCuenta {
         setSaldo(saldo - cantidad);
     }
     
+    /**
+     * 
+     * @return Devuelve la cuenta del usuario
+     */
     public String obtenerCuenta ()
     {
         return cuenta;
     }
 
-  
+  /**
+   * 
+   * @param cuenta crea la cuenta del usuario
+   */
   public void setCuenta(String cuenta) {
     this.cuenta = cuenta;
   }
 
-  
+  /**
+   * 
+   * @param saldo indica el saldo del usuario
+   */
   public void setSaldo(double saldo) {
     this.saldo = saldo;
   }
 
- 
+ /**
+  * 
+  * @return devuelve el tipo de interés 
+  */
   public double getTipoInterés() {
     return tipoInterés;
   }
 
-  
+  /**
+   * 
+   * @param tipoInterés inicializa el tipo de interés
+   */
   public void setTipoInterés(double tipoInterés) {
     this.tipoInterés = tipoInterés;
   }

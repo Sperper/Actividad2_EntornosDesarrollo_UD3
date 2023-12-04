@@ -16,7 +16,6 @@ import java.util.logging.Logger;
 public class Main {
     static BufferedReader dato = new BufferedReader(new InputStreamReader(System.in));
 
-   
     public static void main(String[] args) {
         CCuenta cuenta1;
         double saldoActual;
@@ -64,6 +63,13 @@ public class Main {
         saldoActual = cuenta1.estado();
         System.out.println("El saldo actual es"+ saldoActual );
     }
+    
+    /**
+     * 
+     * @param cuenta1 Cuenta del usuario
+     * @param cantidad Cantidad de dinero que desea ingrsar o retirar de la cuenta 
+     * @param opcion Opcion que elige el usuario
+     */
     public static void operativa_cuenta(CCuenta cuenta1, float cantidad,int opcion){
         if(opcion==2){
             try 
