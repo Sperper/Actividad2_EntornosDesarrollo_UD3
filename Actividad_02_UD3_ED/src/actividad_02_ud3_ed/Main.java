@@ -12,10 +12,16 @@ import java.io.InputStreamReader;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-
+/**
+ * Clase main donde se realizaran todas las operacionens del banco
+ * @author sperper2907
+ */
 public class Main {
     static BufferedReader dato = new BufferedReader(new InputStreamReader(System.in));
-
+    /**
+     * Metodo main para realizar operaciones
+     * @param args 
+     */
     public static void main(String[] args) {
         CCuenta cuenta1;
         double saldoActual;
