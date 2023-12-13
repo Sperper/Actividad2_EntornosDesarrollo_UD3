@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package actividad_02_ud3_ed;
+package com.programacion.actividad_02_ud3_ed;
 
 
 import java.io.BufferedReader;
@@ -67,7 +67,7 @@ public class Main {
             }
         }while (opcion!=3);
         saldoActual = cuenta1.estado();
-        System.out.println("El saldo actual es"+ saldoActual );
+        System.out.println("El saldo actual es "+ saldoActual );
     }
     
     /**
